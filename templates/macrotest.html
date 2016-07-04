@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block top %}
+    {% import 'macros.html' as macros %}
+
+    <ul>
+        {% for item in items %}
+            {{ macros.list_item(item) }}
+        {% endfor %}
+    </ul>
+{% endblock %}
