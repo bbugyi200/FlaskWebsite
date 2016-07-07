@@ -1,6 +1,7 @@
 """ __init__.py
 
 where it all begins...
+HOTFIX
 """
 from manage import app
 
