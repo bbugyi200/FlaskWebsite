@@ -1,9 +1,9 @@
 """ __init__.py
 
 where it all begins...
-HOTFIX
 """
 from manage import app
+import sys # hotfix
 
 # Enabling debugging
 from werkzeug.debug import DebuggedApplication
