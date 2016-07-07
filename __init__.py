@@ -3,7 +3,6 @@
 where it all begins...
 """
 from manage import app
-import os # master
 
 # Enabling debugging
 from werkzeug.debug import DebuggedApplication
