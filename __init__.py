@@ -1,6 +1,7 @@
 """ __init__.py
 
 where it all begins...
+And then I add more comments here
 """
 from manage import app
 
