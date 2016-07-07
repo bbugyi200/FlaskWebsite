@@ -1,9 +1,9 @@
 """ __init__.py
 
 where it all begins...
-And then I add more comments here
 """
 from manage import app
+import os # master
 
 # Enabling debugging
 from werkzeug.debug import DebuggedApplication
