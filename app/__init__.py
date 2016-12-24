@@ -2,6 +2,7 @@ import sys
 sys.path.insert(0, "/var/www/flasky/flasky")
 
 sys.path
+
 from flask import Flask, render_template
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail
@@ -13,6 +14,7 @@ bootstrap = Bootstrap()
 mail = Mail()
 moment = Moment()
 db = SQLAlchemy()
+
 
 def create_app(config_name):
     app = Flask(__name__)
@@ -28,5 +30,3 @@ def create_app(config_name):
     app.register_blueprint(main_blueprint)
 
     return app
-
-
