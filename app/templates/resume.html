@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block top %}
-<IFRAME src="../static/resume/dummy_resume.pdf" id="resume" align="center">
+<div class="vertical-fill">
+</div>
+<div class="resume-container">
+    <iframe src="{{ url_for('static', filename='resume/cv.pdf', _external=True) }}#zoom=150" width="1800px" height="1000px"></iframe>
+    <!-- <embed src="{{ url_for('static', filename='resume/cv.pdf', _external=True) }}#page=1&zoom=200" id="resume" align="center" type='application/pdf'/> -->
+</div>
 {% endblock %}
 
