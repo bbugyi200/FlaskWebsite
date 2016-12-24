@@ -19,7 +19,6 @@ class DevelopmentConfig(Config):
     MAIL_PORT = 587
     MAIL_USE_TLS = True
     MAIL_USERNAME = 'bryanbugyi34@gmail.com'
-    MAIL_PASSWORD = 'KellyDee33'
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
 
 
@@ -32,8 +31,7 @@ class ProductionConfig(Config):
     SQLALCHEMY_DATABASE_URL = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
 
 
-config = {
-     'development': DevelopmentConfig,
-     'testing': TestingConfig,
-     'production': ProductionConfig,
-     'default': DevelopmentConfig}
+config = {'development': DevelopmentConfig,
+          'testing': TestingConfig,
+          'production': ProductionConfig,
+          'default': DevelopmentConfig}
