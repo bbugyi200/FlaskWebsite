@@ -1,3 +1,7 @@
+""" __init__.py
+
+where it all begins...
+"""
 from manage import app
 
 # Enabling debugging
