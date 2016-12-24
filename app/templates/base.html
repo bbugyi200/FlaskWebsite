@@ -1,11 +1,11 @@
 {% extends "bootstrap/base.html" %}
 
 {% block title %} bryanbugyi.com {% endblock %}
-{% block styles %}
-{{ super() }}
-<link rel="stylesheet" href={{ url_for('static', filename='css/style.css', _external=True) }} type="text/css" media="screen" title="no title" charset="utf-8">
-{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css', _external=True) }}" type="text/css" media="screen" title="no title" charset="utf-8">
+{{ super() }}
+{% endblock %}
 
 {% block content %}
 <body>
@@ -31,14 +31,16 @@
         </div>
         {% endblock %}
 
-        <div class="col-md-4">
-            {% block left %}
-            {% endblock %}
+        <div class="col-md-5 leftsection">
+                {% block left %}
+                {% endblock %}
         </div>
 
-        <div class="col-md-8">
-            {% block right %}
-            {% endblock %}
+        <div class="col-md-7 rightsection">
+            <div>
+                {% block right %}
+                {% endblock %}
+            </div>
         </div>
     </div>
 </body>
