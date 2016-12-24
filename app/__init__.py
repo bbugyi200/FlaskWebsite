@@ -1,9 +1,10 @@
 import sys
+sys.path.insert(0, "/var/www/flasky/flasky")  # Needed before other imports
+
 from flask import Flask
 from flask_bootstrap import Bootstrap
 from config import config
 
-sys.path.insert(0, "/var/www/flasky/flasky")
 
 bootstrap = Bootstrap()
 
