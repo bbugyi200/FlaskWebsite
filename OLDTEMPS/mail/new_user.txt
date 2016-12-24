@@ -1,1 +1,0 @@
-The following new user has been added to the Flasky database: {{ user }}
