@@ -28,12 +28,6 @@
                 <li {% if pagetype == "about" %} class="active" {% endif %}>
                 <a href={{ url_for('main.about') }}><span class="glyphicon glyphicon-question-sign"></span> About Me</a>
                 </li>   
-                <li {% if pagetype == "projects" %} class="active" {% endif %}>
-                    <a href="#"><span class="glyphicon glyphicon-flash"></span> Side-Projects</a>
-                </li>
-                <li {% if pagetype == "coursework" %} class="active" {% endif %}>
-                <a href={{ url_for('main.coursework') }}><span class="glyphicon glyphicon-book"></span> Coursework</a>
-                </li>
                 <li {% if pagetype == "resume" %} class="active" {% endif %}>
                 <a href={{ url_for('main.resume') }}><span class="glyphicon glyphicon-file"></span> My Resume</a>
                 </li>
@@ -47,12 +41,12 @@
         </div>
         {% endblock %}
 
-        <div class="col-md-8">
+        <div class="col-md-4">
             {% block left %}
             {% endblock %}
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-8">
             {% block right %}
             {% endblock %}
         </div>
@@ -60,9 +54,5 @@
 </body>
 
 <footer>
-    {% if current_time %}
-    <p>The local date and time is {{ moment(current_time).format('LLL') }}. <br>
-    That was {{ moment(current_time).fromNow(refresh=True) }}.</p>
-    {% endif %}
 </footer>
 {% endblock %}

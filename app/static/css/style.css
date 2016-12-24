@@ -1,6 +1,15 @@
-#resume {
-    width: 2500px;
+.resume-container {
+    position: relative;
+    float: left;
+}
+
+.vertical-fill {
+    position: relative;
     height: 1000px;
+    width: 1000px;
+    float: left;
+    min-height: 100px;
+    min-width: 100px;
 }
 
 .error-page, .toptitle {
