@@ -3,11 +3,17 @@
 }
 
 .leftbuffer {
-    margin-left: 8px;
+    margin-left: 40px;
+}
+
+.rightbuffer {
+    margin-right: 8px;
 }
 
 .leftsection {
     background-color: #FFFFFF;
+    margin: 0 0 0 0;
+    padding: 0;
 }
 
 .rightsection {
