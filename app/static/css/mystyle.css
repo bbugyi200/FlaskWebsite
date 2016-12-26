@@ -1,23 +1,18 @@
-.topbuffer {
-    margin-top: 15px;
+.left {
+    float: left;
+    margin-right: 30px;
 }
 
-.leftbuffer {
-    margin-left: 30px;
-}
-
-.rightbuffer {
+div.row > img {
     margin-right: 15px;
 }
 
-.leftsection {
-    background-color: #FFFFFF;
-    margin: 0 0 0 0;
-    padding: 0;
+div.row > img:first-child{
+    margin-left: 30px;
 }
 
-.rightsection {
-    background-color: #FFFFFF;
+.topbuffer {
+    margin-top: 15px;
 }
 
 .resume-container {

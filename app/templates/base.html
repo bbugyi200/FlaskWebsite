@@ -31,18 +31,8 @@
         </div>
         {% endblock %}
 
-        <div class="col-md-5 leftsection">
-                {% block left %}
-                {% endblock %}
-        </div>
-
-        <div class="col-md-7 rightsection">
-            <div>
-                {% block right %}
-                {% endblock %}
-            </div>
-        </div>
-    </div>
+        {% block main_content %}
+        {% endblock %}
     
     <!-- <div class="navbar navbar-inverse navbar-fixed-bottom"> -->
         <!-- <div class="container"> -->

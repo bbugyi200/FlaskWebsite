@@ -1,36 +1,17 @@
 {% extends "base.html" %}
 
-{% block left %}
-{% include "fourPics.html" %}
-{% endblock %}
+{% block main_content %}
+<div class="container-fluid">
+    <div class="row">
+        <img src="{{ url_for('static', filename='img/MeAndKelly.jpg', _external=True) }}" width=367px height=490px alt="Kelly and Me"/>
 
-{% block right %}
+            <img src="{{ url_for('static', filename='img/Pig2.png', _external=True) }}" width=275px height=490px alt="Pig2"/>
+    </div>
 
-<h1>HTML Ipsum Presents</h1>
+    <div class="row">
+            <img src="{{ url_for('static', filename='img/KellyAndDogs.jpeg', _external=True) }}" width=367px height=275px alt="Kelly and Dogs"/>
 
-<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-<h2>Header Level 2</h2>
-
-<ol>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ol>
-
-<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p></blockquote>
-
-<h3>Header Level 3</h3>
-
-<ul>
-   <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-   <li>Aliquam tincidunt mauris eu risus.</li>
-</ul>
-
-<pre><code>
-#header h1 a {
-  display: block;
-  width: 300px;
-  height: 80px;
-}
-</code></pre>
+            <img src="{{ url_for('static', filename='img/MeAndKelly2.jpg', _external=True) }}" class="topbuffer" width=275px height=368px/>
+    </div>
+</div>
 {% endblock %}
