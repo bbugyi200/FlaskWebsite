@@ -15,6 +15,11 @@ def about():
     return render_template('about.html', pagetype='about')
 
 
+@main.route('/contact')
+def contact():
+    return render_template('contact.html', pagetype='contact')
+
+
 @main.route('/resume')
 def resume():
     return render_template('resume.html', pagetype='resume')

@@ -18,18 +18,15 @@
                 <li {% if pagetype == "about" %} class="active" {% endif %}>
                 <a href={{ url_for('main.about') }}><span class="glyphicon glyphicon-question-sign"></span> About Me</a>
                 </li>   
+                <li {% if pagetype == "contact" %} class="active" {% endif %}>
+                    <a href="{{ url_for('main.contact') }}"><span class="glyphicon glyphicon-earphone"></span> Contact</a>
+                </li>
                 <li {% if pagetype == "resume" %} class="active" {% endif %}>
                 <a href={{ url_for('main.resume') }}><span class="glyphicon glyphicon-file"></span> My Resume</a>
                 </li>
            </ul>
         </div>
     </nav>
-
-        {% block top %}
-        <div class="toptitle">
-            <h1>{{ toptitle }}</h1>
-        </div>
-        {% endblock %}
 
         {% block main_content %}
         {% endblock %}

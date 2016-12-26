@@ -3,13 +3,19 @@
     margin: 0 30px 0 30px;
 }
 
-div.row > img {
+div.homerow > img {
     margin-right: 15px;
 }
 
-div.row > img:first-child{
+div.homerow > img:first-child{
     margin-left: 30px;
 }
+
+div.contactrow > img {
+    float: left;
+}
+
+.ContactImg {}
 
 .topbuffer {
     margin-top: 15px;
