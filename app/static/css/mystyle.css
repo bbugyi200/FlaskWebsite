@@ -24,6 +24,18 @@ div.homerow > img {
     position: relative;
 }
 
+div.aboutme h1 {
+    font-family: 'Alegreya Sans SC';
+}
+
+div.aboutme p, div.aboutme h2{
+    font-family: 'Alegreya Sans';
+}
+
+div.aboutme p {
+    font-size: 17px;
+}
+
 .weblogo h2 {
     top: 4px;
 }
