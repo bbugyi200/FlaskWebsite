@@ -7,6 +7,7 @@
 
 div.homerow > img {
     margin-right: 15px;
+    height: auto;
 }
 
 div.homerow > img:first-child{
