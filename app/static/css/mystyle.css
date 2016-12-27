@@ -5,18 +5,16 @@
     height: auto;
 }
 
-div.homerow > img {
-    margin-right: 15px;
+div.homerow {
+    width: 100%;
     height: auto;
+    white-space: nowrap;
 }
 
-div.homerow > img:first-child{
-    margin-left: 30px;
+div.homerow > img {
+    margin-left: 20px;
 }
 
-.contactrow {
-    margin-left: 0px;
-}
 
 .contactheader img {
     float: left;
