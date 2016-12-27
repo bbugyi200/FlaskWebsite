@@ -11,11 +11,27 @@ div.homerow > img:first-child{
     margin-left: 30px;
 }
 
-div.contactrow > img {
+.contactheader img {
     float: left;
 }
 
-.ContactImg {}
+.contactheader h2 {
+    position: relative;
+}
+
+.weblogo h2 {
+    top: 4px;
+}
+
+.emaillogo h2 {
+    top: 4px;
+    left: 6px;
+}
+    
+.phonelogo h2 {
+    top: 4px;
+    left: 5px;
+}
 
 .topbuffer {
     margin-top: 15px;
