@@ -41,6 +41,11 @@ div.answer p:last-child {
     margin-bottom: 25px;
 }
 
+div.answer a:hover, div.answer a:link, div.answer a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
 .weblogo h2 {
     top: 4px;
 }
