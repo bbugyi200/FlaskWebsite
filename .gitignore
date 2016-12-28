@@ -1,7 +1,10 @@
-venv/*
+# Ignore
+venv/
 *.pyc
 JUNK/
 *.swp
 *.xcf
 app/static/resume/**/*
+
+# Allow
 !app/static/resume/*.pdf
