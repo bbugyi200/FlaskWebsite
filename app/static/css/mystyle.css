@@ -24,17 +24,17 @@ div.homerow > img {
     position: relative;
 }
 
-div.aboutme h1 {
+div.aboutme h1, div.aboutme h2{
     font-family: 'Alegreya Sans SC';
     margin-top: 0;
 }
 
-div.aboutme p, div.aboutme h2{
+div.aboutme p{
     font-family: 'Alegreya Sans';
 }
 
 div.aboutme p {
-    font-size: 17px;
+    font-size: 19px;
 }
 
 .weblogo h2 {
