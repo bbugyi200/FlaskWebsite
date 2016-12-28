@@ -3,3 +3,5 @@ venv/*
 JUNK/
 *.swp
 *.xcf
+app/static/resume/**/*
+!app/static/resume/*.pdf
