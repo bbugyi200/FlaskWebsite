@@ -1,6 +1,6 @@
 {% extends "bootstrap/base.html" %}
 
-{% block title %} bryanbugyi.com {% endblock %}
+{% block title %} bryanbugyi.com - {{ pagetype }}{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css', _external=True) }}" type="text/css" media="screen" title="no title" charset="utf-8">

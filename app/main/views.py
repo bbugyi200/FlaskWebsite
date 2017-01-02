@@ -23,3 +23,10 @@ def contact():
 @main.route('/resume')
 def resume():
     return render_template('resume.html', pagetype='resume')
+
+
+@main.route('/img/<img>')
+def image(img):
+    return render_template('image.html',
+                           pagetype='image',
+                           image='img/%s' % img)
