@@ -3,9 +3,10 @@ from app import create_app, db
 from flask_script import Manager  # , Shell
 from flask import url_for
 from app.models import Flask_Usage
+from localvars import config_name  # localvars is a unique to each machine
 import os
 
-app, UsageData = create_app('default')
+app, UsageData = create_app(config_name)
 
 
 ###################################
