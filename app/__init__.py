@@ -10,6 +10,7 @@ bootstrap = Bootstrap()
 db = SQLAlchemy()
 
 
+
 def create_app(config_name):
     from flask import Flask
     from config import config
@@ -29,6 +30,7 @@ def create_app(config_name):
     UsageData = 0
     from main.views import home, about, resume, contact, image
     with app.app_context():
+        from models import Flask_Usage
         db.create_all()
         UsageData = SQLStorage(db=db)
         tu = TrackUsage(app, UsageData)
