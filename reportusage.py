@@ -1,5 +1,9 @@
+from __future__ import print_function
 from manage import UsageData
 from datetime import timedelta
+import sys
+
+sys.stdout = open('usagedata.txt', 'w')
 
 for hit in UsageData.get_usage():
     # DATE
@@ -11,7 +15,7 @@ for hit in UsageData.get_usage():
     hit.pop('date')
 
     for key, item in hit.items():
-        print '{0}: {1}'.format(key, item)
+        print('{0}: {1}'.format(key, item))
 
     # SPACE
-    print
+    print()
