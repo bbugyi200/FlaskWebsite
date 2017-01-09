@@ -1,8 +1,8 @@
 """ reportusage.py
 
-Uses data from Flask-Track-Usage to retrieve data from website views
-including IPs among other information. This data is formatted and then
-sent to a txt file. """
+Retrieves data from website views by using Flask-Track-Usage plugin.
+Includes IPs among other information. This data is formatted and then
+sent to a text file. """
 
 from __future__ import print_function
 from manage import UsageData
