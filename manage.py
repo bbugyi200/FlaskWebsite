@@ -1,10 +1,11 @@
 # import os
-from app import create_app  # , db
+from app import create_app, db
 from flask_script import Manager  # , Shell
-from flask import Flask, url_for
+from flask import url_for
+from app.models import Flask_Usage
 import os
 
-app = create_app('default')
+app, UsageData = create_app('default')
 
 
 ###################################

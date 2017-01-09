@@ -1,3 +1,5 @@
+""" app/__init__.py """
+
 import sys
 sys.path.insert(0, "/var/www/flasky/flasky")  # Needed before other imports
 
@@ -16,20 +18,25 @@ def create_app(config_name):
     config[config_name].init_app(app)
 
     from flask_track_usage import TrackUsage
-    from flask_track_usage.storage.printer import PrintStorage
+    from flask_track_usage.storage.sql import SQLStorage
 
     bootstrap.init_app(app)
     db.init_app(app)
 
     from main import main as main_blueprint
-    from main.views import home, about, resume, contact, image
     app.register_blueprint(main_blueprint)
-    t = TrackUsage(app, PrintStorage())
 
-    t.include(home)
-    t.include(about)
-    t.include(resume)
-    t.include(contact)
-    t.include(image)
+    UsageData = 0
+    from main.views import home, about, resume, contact, image
+    with app.app_context():
+        db.create_all()
+        UsageData = SQLStorage(db=db)
+        tu = TrackUsage(app, UsageData)
 
-    return app
+        tu.include(home)
+        tu.include(about)
+        tu.include(resume)
+        tu.include(contact)
+        tu.include(image)
+
+    return app, UsageData

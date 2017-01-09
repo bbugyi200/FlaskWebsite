@@ -5,6 +5,8 @@ JUNK/
 *.swp
 *.xcf
 app/static/resume/**/*
+*.sqlite
+configtype.py
 
 # Allow
 !app/static/resume/*.pdf
