@@ -1,3 +1,9 @@
+""" reportusage.py
+
+Uses data from Flask-Track-Usage to retrieve data from website views
+including IPs among other information. This data is formatted and then
+sent to a txt file. """
+
 from __future__ import print_function
 from manage import UsageData
 from datetime import timedelta
@@ -8,7 +14,7 @@ sys.stdout = open('usagedata.txt', 'w')
 
 badIPs = {'home': '173.72.47.206'}
 
-Filter  = False
+Filter = False
 
 try:
     if argv[1] == '--filter':
