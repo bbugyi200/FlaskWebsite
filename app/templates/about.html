@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
 {% block main_content %}
-    <img src="{{ url_for('static', filename='img/Pig.jpg') }}" class="leftImg img-rounded" alt="Pig"/>
-    <div class="col-lg-6 aboutme">
+<div class="aboutme">
+    <img id="leftImg" src="{{ url_for('static', filename='img/Pig.jpg') }}" class="img-rounded" alt="Pig"/>
+
+
+    <div id="interview">
         <h1 align="center">About Me</h1>
         <h2>Who are you?</h2>
         <div class="answer">
@@ -12,13 +15,18 @@
         <h2>Tell me more about yourself.</h2>
         <div class="answer">
             <p>I am 25 years old and I live with my girlfriend Kelly.&nbsp; She is my rock.&nbsp; When I'm not studying or working on a project, my favorite things to do are to spend time with her and our Olde English Bulldog, Rocky.&nbsp; 
-            
+
             <p>If there is just one thing that you should know about me, it is that I am passionate about practically everything that I do.&nbsp; And I consider it a responsibility of mine to ensure that this forever remains the case.&nbsp;</p>
 
             <blockquote cite="http://www.womansday.com/life/entertainment/q-and-a/a4612/get-inspired-qa-deepak-chopra-101286"/>
                 <em><q>Always go with your passions. Never ask yourself if it's realistic or not.</q></em> <footer>Deepak Chopra</footer>
             </blockquote>
-            
+
+        </div>
+
+        <h2>What are your interests?</h2>
+        <div class="answer">
+            <img src="{{ url_for('static', filename='img/wordle2.png') }}" width="90%" alt="Word Cloud"/>
         </div>
 
         <h2>Tell me about this website.</h2>
@@ -29,7 +37,14 @@
 
             <p>If you are interested in better understanding how this website was built, it's codebase can be viewed <a href="https://github.com/bbugyi200/myWebsite">here</a>.</p>
         </div>
-
     </div>
+
+</div>
+
+<script type="text/javascript" charset="utf-8">
+    var leftImg = document.getElementById('leftImg');
+    var interview = document.getElementById('interview');
+    interview.style.height = leftImg.offsetHeight + 'px';
+</script>
 
 {% endblock %}
