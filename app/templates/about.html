@@ -26,7 +26,7 @@
 
         <h2>What are your interests?</h2>
         <div class="answer">
-            <p>This word cloud does a good job of showing how I prioritize my interests. (created using <a href="http://wordle.net">Wordle</a>)</p>
+            <p>This word cloud does a pretty good job of showing how I prioritize my interests. (created using <a href="http://wordle.net">Wordle</a>)</p>
             <img src="{{ url_for('static', filename='img/wordle2.png') }}" width="90%" alt="Word Cloud"/>
         </div>
 
@@ -42,10 +42,8 @@
 
 </div>
 
-<script type="text/javascript" charset="utf-8">
-    var leftImg = document.getElementById('leftImg');
-    var interview = document.getElementById('interview');
-    interview.style.height = leftImg.offsetHeight + 'px';
-</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/myscripts.js') }}" type="text/javascript" charset="utf-8"></script>
+
 
 {% endblock %}
