@@ -1,3 +1,4 @@
+/* home.html */
 div.homerow {
     width: 100%;
     height: auto;
@@ -9,14 +10,8 @@ div.homerow > img {
 }
 
 
-.contactheader img {
-    float: left;
-}
 
-.contactheader h2 {
-    position: relative;
-}
-
+/* about.html */
 .aboutme > #interview {
     overflow: scroll;
 }
@@ -35,9 +30,6 @@ div.aboutme h1, div.aboutme h2{
 
 div.aboutme p{
     font-family: 'Alegreya Sans';
-}
-
-div.aboutme p {
     font-size: 19px;
 }
 
@@ -50,6 +42,9 @@ div.answer a:hover, div.answer a:link, div.answer a:visited {
     text-decoration: underline;
 }
 
+
+
+/* contact.html */
 .weblogo h2 {
     top: 4px;
 }
@@ -72,6 +67,17 @@ div.answer a:hover, div.answer a:link, div.answer a:visited {
     margin-top: 15px;
 }
 
+.contactheader img {
+    float: left;
+}
+
+.contactheader h2 {
+    position: relative;
+}
+
+
+
+/* resume.html */
 .resume-container {
     margin-left: 25px;
 }
