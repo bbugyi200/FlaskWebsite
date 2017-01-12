@@ -53,7 +53,7 @@ for hit in UsageData.get_usage():
 
         IPAdd = hit['remote_addr']
         freeGeoText = requests.get('http://freegeoip.net/json/' + IPAdd).text
-        GeoDict = json.load(freeGeoText)
+        GeoDict = json.loads(freeGeoText)
 
         # Print freegeoip.net data
         for key, item in GeoDict.items():
