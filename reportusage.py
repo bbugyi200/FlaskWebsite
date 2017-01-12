@@ -12,9 +12,11 @@ import sys
 
 sys.stdout = open('usagedata.txt', 'w')
 
-badIPs = {'remote_addr': '173.72.47.206',
+badVals = {'remote_addr': '173.72.47.206',
           'xforwardedfor': '173.72.47.206',
           'browser': 'seamonkey'}
+
+user_agent_keys = ['platform', 'version', 'language', 'browser']
 
 Filter = False
 
@@ -27,9 +29,13 @@ except IndexError:
 for hit in UsageData.get_usage():
     valid = True
     if Filter:
-        for key, item in badIPs.values():
-            if hit[key] == item:
-                valid = False
+        for key, item in badVals.items():
+            if key in user_agent_keys:
+                if hit['user_agent'][key] == item:
+                    valid = False
+            else:
+                if hit[key] == item:
+                    valid = False
     if valid:
         date = hit['date']
         td = timedelta(hours=-5)
