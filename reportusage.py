@@ -9,6 +9,8 @@ from manage import UsageData
 from datetime import timedelta
 from sys import argv
 import sys
+import json
+import requests
 
 sys.stdout = open('usagedata.txt', 'w')
 
@@ -37,6 +39,7 @@ for hit in UsageData.get_usage():
                 if hit[key] == item:
                     valid = False
     if valid:
+        # Print Date
         date = hit['date']
         td = timedelta(hours=-5)
         date += td
@@ -44,7 +47,16 @@ for hit in UsageData.get_usage():
         print(fmtdate)
         hit.pop('date')
 
+        # Print Everything Else
         for key, item in hit.items():
+            print('{0}: {1}'.format(key, item))
+
+        IPAdd = hit['remote_addr']
+        freeGeoText = requests.get('http://freegeoip.net/json/' + IPAdd).text
+        GeoDict = json.load(freeGeoText)
+
+        # Print freegeoip.net data
+        for key, item in GeoDict.items():
             print('{0}: {1}'.format(key, item))
 
         print()
