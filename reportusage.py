@@ -35,14 +35,13 @@ for hit in UsageData.get_usage():
             if key in user_agent_keys:
                 if hit['user_agent'][key] == item:
                     valid = False
-            else:
-                if hit[key] == item:
+            elif hit[key] == item:
                     valid = False
     if valid:
         # Print Date
         date = hit['date']
-        td = timedelta(hours=-5)
-        date += td
+        timediff = timedelta(hours=-5)
+        date += timediff
         fmtdate = date.strftime('%m/%d/%Y - %H:%M:%S')
         print(fmtdate)
         hit.pop('date')
