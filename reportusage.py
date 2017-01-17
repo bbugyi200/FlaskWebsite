@@ -16,7 +16,8 @@ sys.stdout = open('usagedata.txt', 'w')
 
 badVals = {'remote_addr': '173.72.47.206',
            'xforwardedfor': '173.72.47.206',
-           'browser': 'seamonkey'}
+           'browser': 'seamonkey',
+           'platform': None}
 
 user_agent_keys = ['platform', 'version', 'language', 'browser']
 
