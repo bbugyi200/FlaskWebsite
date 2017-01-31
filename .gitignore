@@ -9,6 +9,7 @@ app/static/resume/**/*
 localvars.py
 usagedata.txt
 tags
+*vimrc
 
 # Allow
 !app/static/resume/*.pdf
