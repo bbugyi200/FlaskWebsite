@@ -12,6 +12,8 @@ import sys
 import json
 import requests
 
+sys.setdefaultencoding('utf')
+
 sys.stdout = open('usagedata.txt', 'w')
 
 badVals = {'remote_addr': '173.72.47.206',
