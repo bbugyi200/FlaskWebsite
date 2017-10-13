@@ -17,9 +17,6 @@
                <li {% if pagetype == "home" %} class="active" {% endif %}>
                <a href={{ url_for('main.home') }}><span class="glyphicon glyphicon-home"></span> Home</a>
                </li>
-                <li {% if pagetype == "about" %} class="active" {% endif %}>
-                <a href={{ url_for('main.about') }}><span class="glyphicon glyphicon-question-sign"></span> About Me</a>
-                </li>   
                 <li {% if pagetype == "contact" %} class="active" {% endif %}>
                     <a href="{{ url_for('main.contact') }}"><span class="glyphicon glyphicon-earphone"></span> Contact</a>
                 </li>
