@@ -1,30 +1,47 @@
 {% extends "base.html" %}
 
 {% block main_content %}
-<div class="container-fluid">
-    <div class="row homerow">
-        <img src="{{ url_for('static', filename='img/MeAndKelly.jpg', _external=True) }}" class="img-rounded" width=20% height=auto alt="Kelly and Me" onmouseover="this.src='{{ url_for('static', filename='img/MeAndKelly-edit.png') }}';"/>
+<div class="aboutme">
+    <img id="leftImg" src="{{ url_for('static', filename='img/Pig.jpg') }}" class="img-rounded" alt="Pig"/>
 
-        <img src="{{ url_for('static', filename='img/Pig2.png', _external=True) }}" class="img-rounded" width=15% height=auto alt="Pig2" onmouseover="this.src='{{url_for('static', filename='img/Pig2-edit.png') }}';"/>
 
-        <img src="{{ url_for('static', filename='img/MeAndKelly3.jpeg', _external=True) }}" class="img-rounded" width=23% height=auto alt="MeAndKelly3" onmouseover="this.src='{{ url_for('static', filename='img/MeAndKelly3-edit.png') }}';"/>
+    <div id="interview">
+        <h1 align="center">About Me</h1>
+        <h2>Who are you?</h2>
+        <div class="answer">
+            <p>My name is Bryan Bugyi and I am a Computer Science and Mathematics major at Rutgers University, New Brunswick (class of 2019).&nbsp; I have been enthusiastic about computers for as long as I can remember and consider myself extraordinarily fortunate to have the opportunity to make a career out of something that I love.&nbsp; </p>
+        </div>
 
-        <img src="{{ url_for('static', filename='img/DogsFireplace.jpeg', _external=True) }}" class="img-rounded" width=20% height=auto alt="DogsFireplace" onmouseover="this.src='{{ url_for('static', filename='img/DogsFireplace-edit.png') }}';"/>
+        <h2>Tell me more about yourself.</h2>
+        <div class="answer">
+            <p>If there is just one thing that you should know about me, it is that I am passionate about nearly everything that I do.&nbsp; And I consider it a responsibility of mine to ensure that this forever remains the case.&nbsp;</p>
 
-        <img src="{{ url_for('static', filename='img/Pig3.png', _external=True) }}" class="img-rounded" width=15% height=auto alt="MeAndKelly" onmouseover="this.src='{{ url_for('static', filename='img/Pig3-edit.png') }}';"/>
+            <blockquote cite="http://www.womansday.com/life/entertainment/q-and-a/a4612/get-inspired-qa-deepak-chopra-101286"/>
+                <em><q>Always go with your passions. Never ask yourself if it's realistic or not.</q></em> <footer>Deepak Chopra</footer>
+            </blockquote>
 
+        </div>
+
+        <h2>What are your interests?</h2>
+        <div class="answer">
+            <p>The word cloud shown below (created using <a href="http://wordle.net">Wordle</a>) does a good job of showing how I prioritize my interests.</p>
+            <img src="{{ url_for('static', filename='img/wordle2.png') }}" width="90%" alt="Word Cloud"/>
+        </div>
+
+        <h2>Tell me about this website.</h2>
+        <div class="answer">
+            <p>This website is intended to serve as the central hub for my online identity, as an online host for my resume, and as a programming playground where I can test JavaScript code as I work to better understand the language and web development in general.&nbsp; </p>
+
+            <p>This website is hosted on a cloud server that I am renting from <a href="http://www.digitalocean.com">DigitalOcean</a>.&nbsp; The content on this site has been served to you with the help of <a href="http://flask.pocoo.org">Flask</a>, a lightweight Python web framework.&nbsp; </p>
+
+            <p>If you are interested in better understanding how this website was built, it's codebase can be viewed <a href="https://github.com/bbugyi200/myWebsite">here</a>.</p>
+        </div>
     </div>
 
-    <div class="row topbuffer homerow">
-            <img src="{{ url_for('static', filename='img/KellyAndDogs.jpeg', _external=True) }}" class="img-rounded" width=20% height=auto alt="Kelly and Dogs" onmouseover="this.src='{{ url_for('static', filename='img/KellyAndDogs-edit.png') }}';"/>
-
-            <img src="{{ url_for('static', filename='img/MeAndKelly2.jpg', _external=True) }}" class="img-rounded" width=15% height=auto onmouseover="this.src='{{ url_for('static', filename='img/MeAndKelly2-edit.png') }}';"/>
-
-            <img src="{{ url_for('static', filename='img/Wedding.jpg', _external=True) }}" class="img-rounded" width=23% height=auto alt="Wedding" onmouseover="this.src='{{ url_for('static', filename='img/Wedding-edit.png') }}';"/>
-
-            <img src="{{ url_for('static', filename='img/MeAndKelly4.png', _external=True) }}" class="img-rounded" width=20% height=auto alt="MeAndKelly4" onmouseover="this.src='{{ url_for('static', filename='img/MeAndKelly4-edit.png') }}';"/>
-
-            <img src="{{ url_for('static', filename='img/MeUnderPier.jpg', _external=True) }}" class="img-rounded" width=15% height=auto alt="MeUnderPier" onmouseover="this.src='{{ url_for('static', filename='img/MeUnderPier-edit.png') }}';"/>
-    </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/myscripts.js') }}" type="text/javascript" charset="utf-8"></script>
+
+
 {% endblock %}

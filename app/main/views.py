@@ -10,11 +10,6 @@ def home():
         return str(E)
 
 
-@main.route('/about')
-def about():
-    return render_template('about.html', pagetype='about')
-
-
 @main.route('/contact')
 def contact():
     return render_template('contact.html', pagetype='contact')
