@@ -1,12 +1,11 @@
 # import os
-from app import create_app, db
+from app import create_app
 from flask_script import Manager  # , Shell
 from flask import url_for
-from app.models import Flask_Usage
 from localvars import config_name  # localvars is a unique to each machine
 import os
 
-app, UsageData = create_app(config_name)
+app = create_app(config_name)
 
 
 ###################################
