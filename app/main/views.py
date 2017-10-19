@@ -1,5 +1,5 @@
 from . import main
-from flask import render_template
+from flask import render_template, send_from_directory
 
 
 @main.route('/')
@@ -25,3 +25,8 @@ def image(img):
     return render_template('image.html',
                            pagetype='image',
                            image='img/%s' % img)
+
+
+@main.route('/files/<F>')
+def file(F):
+    return send_from_directory(directory='static/files', filename=F, as_attachment=True)
