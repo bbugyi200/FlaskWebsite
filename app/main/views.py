@@ -29,4 +29,13 @@ def image(img):
 
 @main.route('/files/<F>')
 def file(F):
-    return send_from_directory(directory='static/files', filename=F, as_attachment=True)
+    return send_from_directory(directory='static/files',
+                               filename=F,
+                               as_attachment=True)
+
+
+@main.route('/book_of_the_week')
+def book_of_the_week():
+    return send_from_directory(directory='static/books',
+                               filename='Practical_Vim-(Neil).pdf',
+                               as_attachment=True)
