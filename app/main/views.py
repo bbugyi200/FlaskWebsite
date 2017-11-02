@@ -37,5 +37,5 @@ def file(F):
 @main.route('/bookoftheweek')
 def bookoftheweek():
     return send_from_directory(directory='static/books',
-                               filename='Practical_Vim-(Neil).pdf',
+                               filename='Getting_Things_Done-(David_Allen).pdf',
                                as_attachment=True)
