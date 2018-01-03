@@ -2,10 +2,9 @@
 from app import create_app
 from flask_script import Manager  # , Shell
 from flask import url_for
-from localvars import config_name  # localvars is a unique to each machine
 import os
 
-app = create_app(config_name)
+app = create_app()
 
 
 ###################################

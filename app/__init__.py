@@ -8,12 +8,12 @@ from flask_bootstrap import Bootstrap
 bootstrap = Bootstrap()
 
 
-def create_app(config_name):
+def create_app():
     from flask import Flask
     from config import config
     app = Flask(__name__, static_url_path='/app/static')
-    app.config.from_object(config[config_name])
-    config[config_name].init_app(app)
+    app.config.from_object(config)
+    config.init_app(app)
 
     bootstrap.init_app(app)
 

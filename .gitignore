@@ -4,12 +4,8 @@ venv/
 JUNK/
 *.swp
 *.xcf
-app/static/resume/**/*
 *.sqlite
 localvars.py
 usagedata.txt
 tags
 *vimrc
-
-# Allow
-!app/static/resume/*.pdf
