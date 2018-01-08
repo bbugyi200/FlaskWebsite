@@ -5,7 +5,7 @@ where it all begins...
 
 import os
 import atexit
-import urllib
+import urllib.request
 
 os.environ['FLASK_APP_CONFIG'] = 'production'
 
@@ -36,14 +36,12 @@ def fetchCVFromGitHub():
 scheduler = BackgroundScheduler()
 scheduler.start()
 scheduler.add_job(func=fetchCVFromGitHub,
-                  trigger=IntervalTrigger(days=1),
+                  trigger=IntervalTrigger(hours=6),
                   id='fetch_cv_job',
                   name='Fetch cv.pdf from GitHub daily',
                   repace_existing=True)
 
 atexit.register(lambda: scheduler.shutdown())
-
-fetchCVFromGitHub()  # Ensures cv.pdf is fetched on Server Restart
 
 
 if __name__ == '__main__':
