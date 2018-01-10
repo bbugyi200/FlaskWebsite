@@ -1,3 +1,6 @@
+import getpass
+import urllib.request
+
 from . import main
 from flask import render_template, send_from_directory
 
@@ -17,6 +20,17 @@ def contact():
 
 @main.route('/resume')
 def resume():
+    cvPath = "/home/" + getpass.getuser() + "/Website/app/static/resume/cv.pdf"
+
+    def fetchCVFromGitHub():
+        resp = urllib.request.urlopen("http://github.com/bbugyi200/CV/raw/master/cv.pdf")
+
+        file = open(cvPath, 'wb')
+        file.write(resp.read())
+        file.close()
+
+    fetchCVFromGitHub()
+
     return render_template('resume.html', pagetype='resume')
 
 
